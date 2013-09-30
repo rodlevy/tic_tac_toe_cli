@@ -1,7 +1,5 @@
-require 'game'
-require 'interface'
-require 'board'
-# puts $:
+require 'spec_helper'
+
 describe Game do
 	let!(:new_interface) {Interface.new}
 	let!(:new_board) {Board.new(9)}

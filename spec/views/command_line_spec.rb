@@ -1,11 +1,8 @@
-require 'game'
-require 'interface'
-require 'board'
+require 'spec_helper'
 
+describe CommandLine do
 
-describe Interface do
-
-	let!(:new_interface) {Interface.new}
+	let!(:new_interface) {CommandLine.new}
 	let!(:new_board) {Board.new(9)}
 	let(:new_computer) {Computer.new}
 	let(:fun_game) {Game.new(new_interface, new_computer)}

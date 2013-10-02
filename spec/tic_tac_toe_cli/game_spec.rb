@@ -1,11 +1,7 @@
-require 'game'
-require 'interface'
-require 'board'
-require 'ultimate_tic_tac_toe'
+require 'spec_helper'
 
-# puts $:
 describe Game do
-	let!(:new_interface) {Interface.new}
+	let!(:new_interface) {CommandLine.new}
 	let!(:new_board) {Board.new(9)}
 	let(:new_computer) {Computer.new}
 	let(:fun_game) {Game.new(new_interface, new_computer)}
@@ -15,9 +11,9 @@ describe Game do
 	end
 
 	it 'determines when the game is over' do
-		fun_game.stub(:new).and_return(new_board)
-		new_board.stub(:tie?).and_return(true)
-		fun_game.game_over.should be(true)
+		new_board.grid = ["X", "X", "X","O","O","O", "X", "X","O"]
+		fun_game.board = new_board
+		expect(fun_game.game_over).to be(true)
 	end
 
 	it "informs the player of bad input" do

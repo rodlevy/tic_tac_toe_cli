@@ -1,6 +1,6 @@
-class Games
+class Game
 
-	attr_accessor :position
+	attr_accessor :position, :board
 
 	def initialize(interface, computer)
 		@interface = interface

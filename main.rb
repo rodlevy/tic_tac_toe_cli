@@ -1,5 +1,6 @@
 require 'ultimate_tic_tac_toe'
-require './lib/gameplay'
 require './views/command_line'
+require './lib/game'
 
-GamePlay.new
+fun_game = Games.new(CommandLine.new, Computer.new)
+fun_game.play

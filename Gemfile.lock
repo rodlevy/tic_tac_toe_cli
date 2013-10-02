@@ -1,10 +1,14 @@
+PATH
+  remote: /Users/rlevy/code/learning/ultimate_tic_tac_toe
+  specs:
+    ultimate_tic_tac_toe (0.0.22)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    ultimate_tic_tac_toe (0.0.21)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  ultimate_tic_tac_toe
+  ultimate_tic_tac_toe!

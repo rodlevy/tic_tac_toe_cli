@@ -7,12 +7,15 @@ describe CommandLine do
 	let(:new_computer) {Computer.new}
 	let(:fun_game) {Game.new(new_interface, new_computer)}
 
-	# it "informs the player of bad input" do
-	# 		Interface.stub(:new).and_return(new_interface)
-	# 		new_interface.stub(:gets){"g\n"}
-	# 		fun_game.should_receive(:puts).with("f isnt no good").at_least(1).times
-	# 		new_interface.prompt
-	# 	end
+	it "checks for of bad input" do
+		# new_interface.stub(:gets){"f\n"}
+		# fun_game.validate_input("\z", new_board.grid)
+		# fun_game.should_receive(:validate_input).with("d", new_board.grid)
+		# fun_game.should_receive(:puts).with("f isnt no good")
+		# expect(fun_game).to receive(:check_within_range).with("8", new_board.grid.length).and_return(true)
+		expect(fun_game.check_within_range("8", new_board.grid.length)).to eq true
+	# 	new_interface.prompt
+	end
 
 	# it 'prints a board that corresponds to the grid size' do
 
